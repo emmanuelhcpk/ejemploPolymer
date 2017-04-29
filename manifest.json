@@ -1,0 +1,6 @@
+{
+  "name": "Formulario",
+  "short_name": "Formulario",
+  "start_url": "/",
+  "display": "standalone"
+}

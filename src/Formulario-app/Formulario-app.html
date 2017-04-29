@@ -1,0 +1,52 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+<dom-module id="Formulario-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+        text-align: center;
+      }
+      paper-card{
+        width: 400px;
+        text-align: left;
+      }
+    </style>
+
+    <paper-card heading="Crear cuenta" elevation="3">
+      <form>
+        <div class="card-content">
+          <paper-input label="Nombre"></paper-input>
+          <paper-input label="Edad"></paper-input>
+          <paper-input label="Nacionalidad"></paper-input>
+          <h2>Informacion</h2>
+          <p>Mi nombre es {{name}} y tengo {{age}} años</p>
+        </div>
+        <div class="card-actions">
+          <paper-button raised>Enviar</paper-button>
+        </div>
+      </form>
+    </paper-card>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'Formulario-app',
+
+      properties:{
+        name:{
+          type: String,
+          value: "*"
+        },
+        age: {
+          type: Number,
+          value: 0
+        }
+      }
+    });
+  </script>
+</dom-module>
